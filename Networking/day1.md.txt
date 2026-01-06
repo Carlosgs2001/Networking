@@ -1,0 +1,38 @@
+# Networking Lab – Day 1
+
+**Date:** 2026-01-06  
+**Objective:** Basic network configuration and verification in a lab environment.
+
+## Tasks Completed
+
+1. **Checked IP configuration on the host machine**  
+   - Verified IPv4 and IPv6 addresses.
+   - Confirmed network adapter type and connection status.
+
+2. **Configured virtual network adapters in VirtualBox**  
+   - Set both VM network adapters to **Bridged Adapter** (Realtek).  
+   - Verified connectivity between host and guest VMs.
+
+3. **Tested network connectivity**  
+   - Successfully pinged the Windows Server VM from the client VM.  
+   - Verified DNS resolution using `nslookup` for assigned server IPs.  
+
+4. **Documented network settings**  
+   - Screenshots attached:
+     - `IP Configuration on Client VM`
+     - `VirtualBox Network Adapter Settings`
+     - `Ping test from client to server`
+
+## Observations / Notes
+
+- Host-to-VM ping works with Bridged Adapter.
+- DNS configuration requires correct server IP; misconfigured IP can result in public DNS (e.g., 75.75.75.75) showing instead of internal server IP.
+- Lab reinforces understanding of:
+  - Network adapter types (NAT vs. Bridged vs. Host-only)
+  - IP assignment and verification
+  - Basic troubleshooting with `ping` and `nslookup`
+
+## Next Steps
+
+- Configure internal DNS for Active Directory domain (`corp.local`) and test name resolution from client VM.
+- Continue documenting results in `Day2.md` for networking lab progression.
